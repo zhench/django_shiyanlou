@@ -21,7 +21,8 @@ from article import views
 urlpatterns = [
     #path('admin/', admin.site.urls),
     #path('', views.home),
-    url(r'^admin/',admin.site.urls),
+    url(r'^admin/', admin.site.urls),
     url(r'^$', views.home),
-    url(r'^(?P<my_args>\d+)/$', views.detail, name='detail')
+    url(r'^(?P<my_args>\d+)/$', views.detail, name='detail'),
+    url(r'^test/$', views.test),
 ]
