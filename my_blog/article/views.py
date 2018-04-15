@@ -7,7 +7,9 @@ from datetime import datetime
 
 
 def home(request):
-    return HttpResponse("Hello World,Django")
+    # return HttpResponse("Hello World,Django")
+    post_list = Article.objects.all()
+    return render(request, 'home.html', {'post_list': post_list})
 
 
 def detail(request, my_args):
@@ -18,5 +20,5 @@ def detail(request, my_args):
     return HttpResponse(str)
 
 
-def test(request):
-    return render(request, 'test.html', {"current_time": datetime.now()})
+# def test(request):
+#    return render(request, 'test.html', {"current_time": datetime.now()})
